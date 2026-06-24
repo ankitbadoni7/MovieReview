@@ -2,12 +2,7 @@
 // 🔹 DOMContentLoaded - All Events
 // ----------------------
 document.addEventListener("DOMContentLoaded", () => {
-  // ----------------------
-  // 🔹 Base URL Setup
-  // ----------------------
-  const baseURL = window.location.hostname === "localhost"
-    ? "http://localhost:5000"
-    : "https://movie-review-git-main-ankit-badonis-projects.vercel.app/api"; //
+  
 
   // ----------------------
   // 🔹 Slider
