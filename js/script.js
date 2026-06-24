@@ -175,28 +175,7 @@ if (searchBtn && searchInput) {
 }
 }
 
-  // ----------------------
-  // 🔹 Review Button
-  // ----------------------
-  document.querySelectorAll(".reviewBtn").forEach(btn => {
-    btn.addEventListener("click", async () => {
-      const movieCard = btn.closest(".hero-content");
-      if (!movieCard) return;
-      const title = movieCard.querySelector("h1")?.innerText;
-      if (!title) return;
-
-      try {
-        const res = await fetch(`${baseURL}/api/reviews/title/${encodeURIComponent(title)}`);
-        const data = await res.json();
-        if (data.movieId) window.location.href = `movie_review.html?id=${data.movieId}`;
-        else alert("Movie ID not found for " + title);
-      } catch (err) {
-        console.error(err);
-        alert("Movie review not added yet.");
-      }
-    });
-  });
-
+ 
   // ----------------------
   // 🔹 View All Button
   // ----------------------
