@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineCritic - About Us</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Color Palette */
+      --primary: #295cca;
+      --primary-dark: #1d4ed8;
+      --secondary: #8d5ce2;
+      --accent: #8b5cf6;
+      --dark: #05112d;
+      --light: #f8fafc; 
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: var(--light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation */
+    nav {
+      background: var(--dark);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Center box container */
+    .center-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 25px;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(270deg, var(--light), var(--secondary), var(--accent));
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+      animation: gradientFlow 6s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Box */
+    .content-box {
+      background: rgba(5, 17, 45, 0.85);
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .content-box h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: var(--light);
+    }
+
+    .content-box p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--light);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="series.html">Series</a>
+  </nav>
+
+  <!-- Center box -->
+  <div class="center-box">
+    <div class="logo">CineCritic</div>
+    <div class="content-box">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>CineCritic</strong>, your space for honest, detailed, and engaging reviews.  
+        Whether you’re a fan of spine-chilling horror, gripping mysteries, or timeless classics, we bring you thoughtful insights into every movie and series.  
+        Our goal is to help you discover hidden gems, revisit iconic blockbusters, and decide what’s truly worth your time.  
+        Stay with us as we explore stories that entertain, inspire, and sometimes even challenge the way we see the world.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

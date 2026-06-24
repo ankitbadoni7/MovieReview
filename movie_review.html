@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <link rel="stylesheet" href="css/movie-review.css">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar_mov">
+        <div class="navbar_mov-logo">
+            <a href="index.html" class="logo">CineCritic</a>
+        </div>
+        <div class="navbar_mov-title">
+
+            <h1>REVIEW</h1>
+
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+
+        <!-- Left Poster -->
+        <aside class="movie-poster-container">
+            <img id="poster" src="img/no-poster.png" alt="Poster" class="movie-poster">
+        </aside>
+
+        <!-- Center Content -->
+        <div class="container">
+            <!-- Movie Info -->
+            <section class="movie-info">
+                <h1 id="title">Loading...</h1>
+                <div class="movie-meta">
+                    <span class="genre" id="genre"></span>
+                    <span class="year" id="year"></span>
+                    <span class="rating" id="rating">⭐ 8/10</span>
+                </div>
+                <button id="trailerBtn" class="btn" type="button">
+                    <span>Watch Trailer</span>
+                </button>
+                <p class="movie-description" id="plot">Loading plot...</p>
+                <div class="cast">
+                    <h3>Cast</h3>
+                    <p id="actors">Loading cast...</p>
+                </div>
+                <div id="error" style="color:red"></div>
+                <div class="movRev">
+                    <h3>Review</h3>
+                    <p>loading review...</p>
+                </div>
+            </section>
+
+         
+
+        </div>
+
+
+        <!-- Right Genre Filter -->
+        <aside class="genre-filter">
+            <div class="filter-section">
+                <h3>Movies</h3>
+                <div class="genre-buttons">
+                    <a href="movies.html" class="genre-btn">All</a>
+                    <a href="movies.html?genre=action" class="genre-btn">Action</a>
+                    <a href="movies.html?genre=drama" class="genre-btn">Drama</a>
+                    <a href="movies.html?genre=sci-fi" class="genre-btn">Sci-fi</a>
+                    <a href="movies.html?genre=comedy" class="genre-btn">Comedy</a>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Series</h3>
+                <div class="genre-buttons">
+                    <a href="series.html" class="genre-btn">All</a>
+                    <a href="series.html?genre=action" class="genre-btn">Action</a>
+                    <a href="series.html?genre=drama" class="genre-btn">Drama</a>
+                    <a href="series.html?genre=sci-fi" class="genre-btn">Sci-fi</a>
+                    <a href="series.html?genre=comedy" class="genre-btn">Comedy</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Trailer Modal -->
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="video-container">
+                <iframe title="YouTube video player" id="youtubeTrailer" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3 class="footer-logo">CineCritic</h3>
+                <p class="footer-about">Your trusted source for honest movie reviews, ratings, and recommendations from
+                    a community of passionate film enthusiasts.</p>
+
+                <div class="social-links">
+                    <a href="javascript:void(0)" aria-label="Facebook" data-tooltip="Coming soon">
+                        <img src="img/fb.svg" alt="Facebook">
+                    </a>
+                    <a href="javascript:void(0)" aria-label="Instagram" data-tooltip="Coming soon">
+                        <img src="img/insta.svg" alt="Instagram" width="60rem">
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4 class="ql">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"> Home</a></li>
+                    <!-- <li><a href="reviews.html"> Reviews</a></li> -->
+                    <li><a href="index.html#trending"> Trending</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html"> Series</a></li>
+
+                </ul>
+            </div>
+
+
+            <!-- Newsletter -->
+            <div class="footer-section newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest movie reviews and recommendations.</p>
+
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineCritic. All rights reserved.</p>
+
+            <div class="footer-legal">
+                <a href="about.html">About us</a>
+
+            </div>
+        </div>
+    </footer>
+    
+    <div id="toast" class="toast">
+        Trailer is not available for this title.
+    </div>
+
+    <!-- Dynamic JS -->
+    <script src="js/moviereview.js"></script>
+
+</body>
+
+</html>

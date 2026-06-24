@@ -1,0 +1,180 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --bg-dark: #1e1e2f;
+            --bg-light: #2a2a40;
+            --text-light: #f5f5f5;
+            --text-muted: #cfcfcf;
+            --border: #444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 🔹 Navbar */
+        nav.navbar_ {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-dark);
+            padding: 12px 24px;
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            /* fix top */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            -webkit-background-clip: text;
+            background: linear-gradient(90deg, #f8fafc, #8d5ce2);
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            background-clip: text;
+        }
+
+        nav .nav_links a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav .nav_links a:hover {
+            color: var(--primary);
+        }
+
+        /* 🔹 Center container */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 70px;
+            /* navbar ke niche gap */
+        }
+
+        .report-container {
+            max-width: 700px;
+            width: 100%;
+            background: var(--bg-dark);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
+        }
+
+        .report-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--bg-light);
+            color: var(--text-light);
+            outline: none;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border: 1px solid var(--primary);
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+   
+
+#toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all .3s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toast.success {
+    background: #16a34a;
+}
+
+#toast.error {
+    background: #dc2626;
+}

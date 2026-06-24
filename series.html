@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCritic - Discover & Review Series</title>
+    <link rel="stylesheet" href="css/series-styles.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar_mov">
+        <div class="navbar_mov-logo">
+            <a href="index.html" class="logo">CineCritic</a>
+        </div>
+
+        <div class="navbar_mov-title">
+            <a href="series.html" style="text-decoration: none;">
+                <h2 style="color: #f5c518; cursor: pointer;">SERIES</h2>
+            </a>
+        </div>
+
+        <div class="navbar_mov-filters">
+            <div class="dropdown">
+                <button class="dropbtn">By Genre</button>
+                <div class="dropdown-content">
+                    <a href="#" data-type="genre" data-filter="action">Action</a>
+                    <a href="#" data-type="genre" data-filter="drama">Drama</a>
+                    <a href="#" data-type="genre" data-filter="comedy">Comedy</a>
+                    <a href="#" data-type="genre" data-filter="sci-fi">Sci-Fi</a>
+                    <a href="#" data-type="genre" data-filter="all">All</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" placeholder="Search for series...">
+            <button class="search-btn"> Search</button>
+        </div>
+    </div>
+
+    <!-- Series Grid -->
+    <div class="series-grid" id="seriesGrid"></div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">CineCritic</h3>
+                <p class="footer-about">Your trusted source for honest movie reviews, ratings, and recommendations from
+                    a community of passionate film enthusiasts.</p>
+                <div class="social-links">
+                    <a href="javascript:void(0)" aria-label="Facebook" data-tooltip="Coming soon">
+                        <img src="img/fb.svg" alt="Facebook">
+                    </a>
+                    <a href="javascript:void(0)" aria-label="Instagram" data-tooltip="Coming soon">
+                        <img src="img/insta.svg" alt="Instagram" width="60rem">
+                    </a>
+
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="ql">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="index.html#trending"> Trending</a></li>
+                    <li><a href="movies.html"> Movies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest movie reviews and recommendations.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineCritic. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="about.html">About us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/series.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCritic - Discover & Review Movies</title>
+    <meta name="description"
+        content="Discover and review the latest movies. Read honest reviews and ratings from our community of movie enthusiasts.">
+    <link rel="icon" type="image/png" href="/img/fevicon.png">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylefunction.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar_">
+        <div class="nav_container">
+            <a href="#" class="logo">CineCritic</a>
+
+            <div class="nav_middle">
+                <div class="nav_links">
+                    <a href="#home">Home</a>
+                    <a href="#trending">Trending</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#series">Series</a>
+                </div>
+                <!-- Auth + Search -->
+                <div class="auth_buttons">
+
+                    <!-- Search Bar -->
+                    <div class="nav_search">
+                        <input type="text" id="searchInput" placeholder="Type full name.........." />
+                        <button id="searchBtn">🔍</button>
+                    </div>
+                    
+                    <!-- Report -->
+                    <button id="reportBtn" class="btn btn-outline-secondary"
+                        onclick="window.location.href='report.html'">Report</button>
+                </div>
+            </div>
+            <button class="hamburger">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">Home</a>
+            <a href="#trending">Trending</a>
+            <a href="#movies">Movies</a>
+            <a href="#series">Series</a>
+
+            <!-- <div class="nav_search">
+                <input type="text" id="searchInputMobile" placeholder="Type full name..........">
+                <button id="searchBtnMobile">🔍</button>
+            </div> -->
+            <div id="searchResultsMobile"></div>
+
+            <button id="reportBtnMobile" onclick="window.location.href='report.html'">Report</button>
+        </div>
+    </nav>
+
+
+
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="img/spiderman.jpg" alt="Spiderman">
+                    <div class="hero-content">
+                        <h1>Spider-Man: No Way Home</h1>
+                        <h3>★★★★☆ (4/5) • 2h 28min • Action, Adventure, Sci-Fi • 2021 </h3>
+                        <p>Spider-Man: No Way Home follows Peter Parker as he navigates a multiverse crisis,
+                            facing villains from previous Spider-Man films. He must team up with unexpected allies to
+                            save reality.</p>
+                        <div class="btn_grp">
+                            <button type="button" id="trailerBtn" data-video="JfVOs4VSpmA">Play Trailer</button>
+                            <button class="reviewBtn" data-id="tt10872600">
+                                Review
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/batman.jpg" alt="Batman">
+                    <div class="hero-content">
+                        <h1>The Dark Knight</h1>
+                        <h3>★★★★★ (5/5) • 2h 32min • Action, Crime, Drama • 2008</h3>
+                        <p>
+                            Batman faces his greatest challenge when the Joker unleashes chaos on Gotham City.
+                            With the help of allies, Bruce Wayne must push his limits to uphold justice,
+                            questioning the line between hero and vigilante.
+                        </p>
+
+                        <div class="btn_grp">
+                            <button id="trailerBtn" data-video="EXeTwQWrcwY">Play Trailer</button>
+                            <button class="reviewBtn" data-id="tt0468569">
+                                Review
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/harry.jpg" alt="Harry Potter">
+                    <div class="hero-content">
+                        <h1>Harry Potter and the Sorcerer's Stone</h1>
+                        <h3>★★★★☆ (4/5) • 2h 32min • Fantasy, Adventure, Family • 2001</h3>
+                        <p>
+                            Harry Potter, an orphaned boy, discovers he is a wizard and begins his journey at
+                            Hogwarts School of Witchcraft and Wizardry. With his friends, he faces magical challenges
+                            and uncovers the dark secrets tied to Lord Voldemort.
+                        </p>
+
+                        <div class="btn_grp">
+                            <button id="trailerBtn" data-video="VyHV0BRtdxo">Play Trailer</button>
+                            <button class="reviewBtn" data-id="tt0241527">
+                                Review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="pagination">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+
+        <!-- Trending Movies -->
+        <section class="trending-movies" id="trending">
+            <div class="section-header">
+                <h2 class="section-title">Trending This Month</h2>
+
+            </div>
+
+            <div id="trendingMovies" class="movie-grid"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Movies -->
+        <section class="movies" id="movies">
+            <div class="section-header">
+                <h2 class="section-title">Movies</h2>
+
+                <div class="genre-buttons">
+                    <a href="movies.html?genre=comedy" class="genre-btn">Comedy</a>
+
+                    <a href="movies.html?genre=action" class="genre-btn">Action</a>
+
+                    <a href="movies.html?genre=drama" class="genre-btn">Drama</a>
+
+                    <a href="movies.html?genre=sci-fi" class="genre-btn">Sci-Fi</a>
+                </div>
+
+                <a href="movies.html" class="view-all"><i>View All </i></a>
+            </div>
+
+            <div class="reviewed-line">
+                <span class="reviewed-text">Just Reviewed</span>
+                <hr class="gradient-line">
+            </div>
+
+            <div id="moviesGrid" class="movie-grid"></div>
+        </section>
+
+        <!-- Series -->
+        <section class="series" id="series">
+            <div class="section-header">
+                <h2 class="section-title">Series</h2>
+
+                <div class="genre-buttons">
+
+                    <a href="series.html?genre=action" class="genre-btn">Action</a>
+                    <a href="series.html?genre=drama" class="genre-btn">Drama</a>
+                    <a href="series.html?genre=sci-fi" class="genre-btn">Sci-fi</a>
+                    <a href="series.html?genre=Comedy" class="genre-btn">Comedy</a>
+                </div>
+                <a href="series.html" class="view-all"><i>View All </i></a>
+            </div>
+
+            <div class="reviewed-line">
+                <span class="reviewed-text">Just Reviewed</span>
+                <hr class="gradient-line">
+            </div>
+
+            <div id="seriesSection" class="movie-grid"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section ">
+                <h3 class="footer-logo">CineCritic</h3>
+                <p class="footer-about">Your trusted source for honest movie reviews, ratings, and recommendations from
+                    a community of passionate film enthusiasts.</p>
+
+                <div class="social-links">
+                    <a href="javascript:void(0)" aria-label="Facebook" data-tooltip="Coming soon">
+                        <img src="img/fb.svg" alt="Facebook">
+                    </a>
+                    <a href="javascript:void(0)" aria-label="Instagram" data-tooltip="Coming soon">
+                        <img src="img/insta.svg" alt="Instagram" width="60rem">
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section cat">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#movies"> Movies</a></li>
+                    <!-- <li><a href="reviews.html"> Reviews</a></li> -->
+                    <li><a href="#trending"> Trending</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-section  cat">
+                <h4>Movies</h4>
+                <ul class="footer-links">
+                    <!--iske liye js movies.html me h-->
+
+                    <li><a href="movies.html?genre=action">Action</a></li>
+                    <li> <a href="movies.html?genre=drama"> Drama</a></li>
+                    <li><a href="movies.html?genre=Comedy">Comedy</a></li>
+                    <li> <a href="movies.html?genre=sci-fi">Sci-fi</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section cat">
+                <h4>Series</h4>
+                <ul class="footer-links">
+
+                    <li> <a href="series.html?genre=action">Action</a> </li>
+                    <li><a href="series.html?genre=drama">Drama</a></li>
+                    <li> <a href="series.html?genre=Comedy">Comedy</a></li>
+                    <li> <a href="series.html?genre=sci-fi">Sci-fi</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-section newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest movie reviews and recommendations.</p>
+
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineCritic. All rights reserved.</p>
+
+            <div class="footer-legal">
+
+                <a href="about.html">About us</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/search.js" defer></script>
+
+</body>
+
+</html>
